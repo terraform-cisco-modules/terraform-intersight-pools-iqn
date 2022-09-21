@@ -1,6 +1,6 @@
 module "iqn_pool" {
-  source  = "scotttyso/pools-iqn/intersight"
-  version = ">= 1.0.2"
+  source  = "terraform-cisco-modules/pools-iqn/intersight"
+  version = ">= 1.0.1"
 
   assignment_order = "sequential"
   description      = "default IQN Pool"
