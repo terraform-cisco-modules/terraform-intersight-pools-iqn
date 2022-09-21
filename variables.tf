@@ -23,12 +23,6 @@ variable "description" {
   type        = string
 }
 
-variable "prefix" {
-  default     = ""
-  description = "The prefix for IQN blocks created for this pool."
-  type        = string
-}
-
 variable "iqn_blocks" {
   default     = []
   description = <<-EOT
@@ -58,6 +52,12 @@ variable "name" {
 variable "organization" {
   default     = "default"
   description = "Intersight Organization Name to Apply Policy to.  https://intersight.com/an/settings/organizations/."
+  type        = string
+}
+
+variable "prefix" {
+  default     = ""
+  description = "The prefix for IQN blocks created for this pool."
   type        = string
 }
 
