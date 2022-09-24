@@ -1,7 +1,3 @@
-terraform {
-  experiments = [module_variable_optional_attrs]
-}
-
 #____________________________________________________________
 #
 # IQN Pool Variables Section.
@@ -36,9 +32,9 @@ variable "iqn_blocks" {
   type = list(object(
     {
       from   = string
-      size   = optional(number)
+      size   = optional(number, null)
       suffix = string
-      to     = optional(string)
+      to     = optional(string, null)
     }
   ))
 }

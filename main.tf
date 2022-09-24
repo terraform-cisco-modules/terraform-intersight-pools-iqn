@@ -14,7 +14,7 @@ data "intersight_organization_organization" "org_moid" {
 # GUI Location: Pools > Create Pool
 #____________________________________________________________
 
-resource "intersight_iqnpool_pool" "iqn_pool" {
+resource "intersight_iqnpool_pool" "iqn" {
   assignment_order = var.assignment_order
   description      = var.description != "" ? var.description : "${var.name} IQN Pool."
   name             = var.name
@@ -23,9 +23,9 @@ resource "intersight_iqnpool_pool" "iqn_pool" {
     for_each = { for v in var.iqn_blocks : v.from => v }
     content {
       from   = iqn_suffix_blocks.value.from
-      size   = iqn_suffix_blocks.value.size != null ? tonumber(iqn_suffix_blocks.value.size) : null
+      size   = iqn_suffix_blocks.value.size
       suffix = iqn_suffix_blocks.value.suffix
-      to     = iqn_suffix_blocks.value.to != null ? iqn_suffix_blocks.value.to : null
+      to     = iqn_suffix_blocks.value.to
     }
   }
   organization {
