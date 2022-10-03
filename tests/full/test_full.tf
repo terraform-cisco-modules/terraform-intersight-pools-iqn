@@ -30,7 +30,7 @@ module "main" {
   source           = "../.."
   assignment_order = "sequential"
   description      = "Demo WWPN Pool."
-  id_blocks = [
+  iqn_suffix_blocks = [
     {
       from   = "0"
       size   = 1000
