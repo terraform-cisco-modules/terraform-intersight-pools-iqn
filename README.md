@@ -1,9 +1,14 @@
 <!-- BEGIN_TF_DOCS -->
+[![Tests](https://github.com/terraform-cisco-modules/terraform-intersight-pools-iqn/actions/workflows/terratest.yml/badge.svg)](https://github.com/terraform-cisco-modules/terraform-intersight-pools-iqn/actions/workflows/terratest.yml)
 # Terraform Intersight Pools - IQN
 Manages Intersight IQN Pools
 
 Location in GUI:
 `Pools` » `Create Pool` » `IQN`
+
+## Easy IMM
+
+[*Easy IMM - Comprehensive Example*](https://github.com/terraform-cisco-modules/easy-imm-comprehensive-example) - A comprehensive example for policies, pools, and profiles.
 
 ## Example
 
@@ -14,7 +19,7 @@ module "iqn_pool" {
   version = ">= 1.0.2"
 
   assignment_order = "sequential"
-  description      = "default IQN Pool"
+  description      = "default IQN Pool."
   iqn_suffix_blocks = [
     {
       from   = "0"
@@ -24,6 +29,7 @@ module "iqn_pool" {
   ]
   name         = "default"
   organization = "default"
+  prefix       = "iqn.1984-12.com.cisco"
 }
 
 ```

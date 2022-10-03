@@ -3,7 +3,7 @@ module "iqn_pool" {
   version = ">= 1.0.2"
 
   assignment_order = "sequential"
-  description      = "default IQN Pool"
+  description      = "default IQN Pool."
   iqn_suffix_blocks = [
     {
       from   = "0"
@@ -13,5 +13,6 @@ module "iqn_pool" {
   ]
   name         = "default"
   organization = "default"
+  prefix       = "iqn.1984-12.com.cisco"
 }
 
