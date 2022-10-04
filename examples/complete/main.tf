@@ -4,7 +4,7 @@ module "iqn_pool" {
 
   assignment_order = "sequential"
   description      = "default IQN Pool."
-  iqn_suffix_blocks = [
+  iqn_blocks = [
     {
       from   = "0"
       size   = 1000

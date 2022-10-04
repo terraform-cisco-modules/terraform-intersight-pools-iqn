@@ -50,7 +50,7 @@ func TestFull(t *testing.T) {
 	expectedJSONTemplate := `
 {
 	"Name":        "{{ .name }}",
-	"Description": "default IQN Pool.",
+	"Description": "{{ .name }} IQN Pool.",
 
 	"AssignmentOrder": "sequential",
 	"IqnSuffixBlocks": [

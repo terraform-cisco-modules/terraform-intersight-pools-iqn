@@ -29,8 +29,8 @@ output "moid" {
 module "main" {
   source           = "../.."
   assignment_order = "sequential"
-  description      = "Demo WWPN Pool."
-  iqn_suffix_blocks = [
+  description      = "${var.name} IQN Pool."
+  iqn_blocks = [
     {
       from   = "0"
       size   = 1000
