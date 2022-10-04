@@ -57,7 +57,7 @@ func TestFull(t *testing.T) {
 		{
 			"ClassId":    "iqnpool.IqnSuffixBlock",
 			"ObjectType": "iqnpool.IqnSuffixBlock",
-			"From":       "0",
+			"From":       0,
 			"Size":       1000, 
 			"Suffix":     "ucs-host", 
 			"To":         999
