@@ -38,6 +38,6 @@ module "main" {
     }
   ]
   name         = var.name
-  organization = "default"
+  organization = "terratest"
   prefix       = "iqn.1984-12.com.cisco"
 }
